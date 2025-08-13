@@ -26,4 +26,4 @@ jobs:
         aws configure set default.region us-east-2
 
     - name: Deploy to S3
-      run: aws s3 sync ./dist s3://nombre-de-tu-bucket --delete
+      run: aws s3 sync ./dist s3://tarea-03-carlosdeleon --delete
