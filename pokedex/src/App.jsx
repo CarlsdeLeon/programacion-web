@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PokemonCard from "./components/PokemonCard";
+import "./App.css";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -32,9 +33,9 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-wrap gap-6 justify-center p-6">
+    <div className="pokemon-container">
       {pokemons.length === 0 ? (
-        <p className="text-gray-600">Loading pokémon...</p>
+        <p className="loading-text">Loading pokémon...</p>
       ) : (
         pokemons.map((p) => (
           <PokemonCard 
@@ -42,6 +43,7 @@ function App() {
             name={p.name} 
             image={p.image} 
             type={`Type: ${p.type}`} 
+            className="pokemon-card"
           />
         ))
       )}
