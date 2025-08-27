@@ -1,12 +1,9 @@
-# React + Vite
+Hooks
+useState: Permite crear y manejar variables de estado dentro de un componente, se uso para manejar valores dinamicos, en este caso los inputs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+useEffect: Permite ejecutar efectos securndarios en los componentes, como llamadas a APIs, suscripciones o cambios, se uso para ejecutar la logica ciando el componente se renderiza.
 
-Currently, two official plugins are available:
+Hook personalizado.
+useLocalStorage: Permite mantener un estado de reacr sincronizado con el al,acenamiento local en el anvegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+pagina web: d3da7488ygxi37.cloudfront.net 
