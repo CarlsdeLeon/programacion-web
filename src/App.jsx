@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import TaskItem from "./components/TaskItem";
+import "./App.css"
 
 export default function App() {
   const [tasks, setTasks] = useLocalStorage("tasks", []);
