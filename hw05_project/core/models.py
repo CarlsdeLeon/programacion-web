@@ -21,4 +21,12 @@ class Editorial(models.Model):
 
     def __str__(self):
         return self.nombre
-    
+
+class Resennia(models.Model):
+    contenido = models.TextField()
+    calificacion = models.IntegerField()
+    libro = models.ForeignKey(Libro, on_delete=models.CASCADE, related_name="reseñas")
+
+    def __str__(self):
+        return f"Reseña de {self.libro.titulo}"
+
