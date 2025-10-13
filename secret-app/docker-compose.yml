@@ -1,4 +1,4 @@
-
+version: "3.8"
 services:
   redis:
     image: redis:7-alpine
@@ -16,10 +16,15 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - DEBUG=True
     ports:
       - "8000:8000"
     volumes:
       - ./backend:/app
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
 
   frontend:
     build: ./frontend
@@ -27,15 +32,20 @@ services:
     depends_on:
       - backend
     ports:
-      - "3000:80"
-    volumes:
-      - ./frontend:/app
+      - "5173:80"  
+    environment:
+      - VITE_API_BASE=http://localhost:8000
 
   redisinsight:
-    image: redislabs/redisinsight:2.0
+    image: redis/redisinsight:latest  
     container_name: redisinsight
     ports:
       - "8001:8001"
+    volumes:
+      - redisinsight-data:/db
+    environment:
+      - RI_HOST=0.0.0.0
 
 volumes:
   redis-data:
+  redisinsight-data:  

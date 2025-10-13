@@ -1,0 +1,22 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Archivos de Django
+db.sqlite3
+/staticfiles/
+/media/
+
+# Archivos de IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Archivos de sistema
+.DS_Store
+
+# Archivos de Redis (si usas persistencia local)
+dump.rdb
