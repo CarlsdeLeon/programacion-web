@@ -1,0 +1,41 @@
+OOoOversion: "3.8"
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  backend:
+    build: ./backend
+    container_name: secret-backend
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    container_name: secret-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/app
+
+  redisinsight:
+    image: redislabs/redisinsight:2.0
+    container_name: redisinsight
+    ports:
+      - "8001:8001"
+
+volumes:
+  redis-data:
