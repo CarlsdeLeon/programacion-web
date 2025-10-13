@@ -37,9 +37,7 @@ Docker Compose
   Enter your secret text in the textbox
   Click "Ocultar" to generate a secure key
   Copy the generated key (it will be automatically deleted after first use)
-
 2. **Reveal a Secret**
-   
   Go to the "Revelar" tab
   Paste the key you received
   Click "Revelar" to view the secret
