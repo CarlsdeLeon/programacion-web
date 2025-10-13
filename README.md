@@ -26,9 +26,9 @@ Docker Compose
 2. **Run the aplication**
    docker compose up --build
 3. **Access the services**
-   Frontend: http://localhost:5173
-   Backend API: http://localhost:8000
-   RedisInsight: http://localhost:8001
+    Frontend: http://localhost:5173
+    Backend API: http://localhost:8000
+    RedisInsight: http://localhost:8001
    
 ### How to Use
 
