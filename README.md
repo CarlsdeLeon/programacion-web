@@ -19,26 +19,26 @@ Docker Compose<br>
 
 ### Installation & Execution 
 
-1. **Clone the repository**
+1. **Clone the repository**<br>
    ```bash<br>
    git clone https://github.com/CarlsdeLeon/programacion-web.git<br>
    cd secret-app<br>
    git checkout assessment-3<br>
-2. **Run the aplication**
+2. **Run the aplication**<br>
    docker compose up --build<br>
-3. **Access the services**
+3. **Access the services**<br>
     Frontend: http://localhost:5173<br>
     Backend API: http://localhost:8000<br>
     RedisInsight: http://localhost:8001<br>
    
 ### How to Use
 
-1. **Hide a Secret**
+1. **Hide a Secret**<br>
   Go to the "Ocultar" tab<br>
   Enter your secret text in the textbox<br>
   Click "Ocultar" to generate a secure key<br>
   Copy the generated key (it will be automatically deleted after first use)<br>
-2. **Reveal a Secret**
+2. **Reveal a Secret**<br>
   Go to the "Revelar" tab<br>
   Paste the key you received<br>
   Click "Revelar" to view the secret<br>
