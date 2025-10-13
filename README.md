@@ -3,42 +3,43 @@
 This is a web application similar to scrt.link, which allows you to simulate generating secure links that can be viewed only once before being automatically destroyed.
 
 ## Tech Stack
-**Backend**: Django REST Framework, Python 3.11
-**Frontend**: Vite 
-**Database**: Redis
-**Container**: Docker & Docker Compose
-**Redis GUI**: RedisInsight
+
+**Backend**: Django REST Framework, Python 3.11<br>
+**Frontend**: Vite <br>
+**Database**: Redis<br>
+**Container**: Docker & Docker Compose<br>
+**Redis GUI**: RedisInsight<br>
 
 ## Prerequisites
 
-Docker
-Docker Compose
+Docker<br>
+Docker Compose<br>
 
 ## Installation & Setup
 
 ### Installation & Execution 
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/CarlsdeLeon/programacion-web.git
-   cd secret-app
-   git checkout assessment-3
+   ```bash<br>
+   git clone https://github.com/CarlsdeLeon/programacion-web.git<br>
+   cd secret-app<br>
+   git checkout assessment-3<br>
 2. **Run the aplication**
-   docker compose up --build
+   docker compose up --build<br>
 3. **Access the services**
-    Frontend: http://localhost:5173
-    Backend API: http://localhost:8000
-    RedisInsight: http://localhost:8001
+    Frontend: http://localhost:5173<br>
+    Backend API: http://localhost:8000<br>
+    RedisInsight: http://localhost:8001<br>
    
 ### How to Use
 
 1. **Hide a Secret**
-  Go to the "Ocultar" tab
-  Enter your secret text in the textbox
-  Click "Ocultar" to generate a secure key
-  Copy the generated key (it will be automatically deleted after first use)
+  Go to the "Ocultar" tab<br>
+  Enter your secret text in the textbox<br>
+  Click "Ocultar" to generate a secure key<br>
+  Copy the generated key (it will be automatically deleted after first use)<br>
 2. **Reveal a Secret**
-  Go to the "Revelar" tab
-  Paste the key you received
-  Click "Revelar" to view the secret
-  The secret will be automatically destroyed after viewing
+  Go to the "Revelar" tab<br>
+  Paste the key you received<br>
+  Click "Revelar" to view the secret<br>
+  The secret will be automatically destroyed after viewing<br>
